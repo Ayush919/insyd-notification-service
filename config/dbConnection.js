@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 
 // Prepare sequelize instance based on environment
 let sequelize;
-
+console.log("url:",process.env.DATABASE_URL)
 // If DATABASE_URL exists → use production database (Railway, etc)
 if (process.env.DATABASE_URL) {
     sequelize = new Sequelize(process.env.DATABASE_URL, {
