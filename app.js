@@ -13,7 +13,7 @@ const app = express();
 // Apply middlewares
 app.use(helmet());
 app.use(cors({
-    origin: "https://insyd-notification-client-service.vercel.app/",
+    origin: "https://insyd-notification-client-service.vercel.app",
     methods: "*", // ✅ Allow all HTTP verbs
 }));
 app.use(express.json());
