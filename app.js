@@ -25,7 +25,7 @@ handleRequests(app);
 // Connect DB and start server
 connectDatabase().then(() => {
     // Start HTTP Server
-    const httpServer = app.listen(3000, () => {
+    const httpServer = app.listen(process.env.PORT || 8080, () => {
         console.log(`🚀 Server running on port 3000`);
     });
     // Setup WebSocket server with unrestricted CORS
